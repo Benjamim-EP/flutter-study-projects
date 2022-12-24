@@ -10,8 +10,11 @@ class Resposta extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      child: RaisedButton(
-       textColor: Colors.white,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: Colors.blue,
+          onPrimary: Colors.white,
+        ),
         onPressed: quandoSelecionado,
         child: Text(texto),
       ),
