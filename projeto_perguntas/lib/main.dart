@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './questionario.dart';
 import './resultado.dart';
 
-void main() => runApp(const PerguntaApp());
+void main() => runApp(PerguntaApp());
 
 class _PerguntaAppState extends State<PerguntaApp> {
   var _perguntaSelecionada = 0;
@@ -44,8 +44,13 @@ class _PerguntaAppState extends State<PerguntaApp> {
         _pontuacaoTotal += pontuacao;
       });
     }
+  }
 
-    print(_pontuacaoTotal);
+  void _reiniciarQuestionario() {
+    setState(() {
+      _perguntaSelecionada = 0;
+      _pontuacaoTotal = 0;
+    });
   }
 
   bool get temPerguntaSelecionada {
@@ -65,15 +70,13 @@ class _PerguntaAppState extends State<PerguntaApp> {
                 perguntaSelecionada: _perguntaSelecionada,
                 quandoResponder: _responder,
               )
-            : Resultado(_pontuacaoTotal),
+            : Resultado(_pontuacaoTotal, _reiniciarQuestionario),
       ),
     );
   }
 }
 
 class PerguntaApp extends StatefulWidget {
-  const PerguntaApp();
-
   @override
   _PerguntaAppState createState() {
     return _PerguntaAppState();
