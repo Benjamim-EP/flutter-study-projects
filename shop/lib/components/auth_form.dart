@@ -50,7 +50,7 @@ class _AuthFormState extends State<AuthForm>
       ),
     );
 
-    _heightAnimation?.addListener(() => setState(() {}));
+    // _heightAnimation?.addListener(() => setState(() {}));
   }
 
   @override
@@ -130,10 +130,12 @@ class _AuthFormState extends State<AuthForm>
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Container(
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeIn,
         padding: const EdgeInsets.all(16),
-        // height: _isLogin() ? 310 : 400,
-        height: _heightAnimation?.value.height ?? (_isLogin() ? 310 : 400),
+        height: _isLogin() ? 310 : 400,
+        // height: _heightAnimation?.value.height ?? (_isLogin() ? 310 : 400),
         width: deviceSize.width * 0.75,
         child: Form(
           key: _formKey,
