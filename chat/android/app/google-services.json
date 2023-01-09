@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1013784193083",
+    "project_id": "chat-89dc1",
+    "storage_bucket": "chat-89dc1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013784193083:android:3113688465560b28bf141e",
+        "android_client_info": {
+          "package_name": "br.com.septima.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013784193083-pmea0j52p82pa8ikgm3m7kbr1np1u4ct.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCou0MxgEfABSbbPbNSs4h4V-cqqv383sU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013784193083-pmea0j52p82pa8ikgm3m7kbr1np1u4ct.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
