@@ -23,7 +23,7 @@ class ProductDetailPage extends StatelessWidget {
                     tag: product.id,
                     child: Image.network(
                       product.imageUrl,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                     ),
                   ),
                   const DecoratedBox(
